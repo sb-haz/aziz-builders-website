@@ -69,7 +69,6 @@ export default function Home() {
             <div className="hidden md:flex space-x-8">
               <Link href="#about" className="text-gray-700 hover:text-teal-900">About</Link>
               <Link href="#services" className="text-gray-700 hover:text-teal-900">Services</Link>
-              <Link href="#projects" className="text-gray-700 hover:text-teal-900">Projects</Link>
               <Link href="#testimonials" className="text-gray-700 hover:text-teal-900">Testimonials</Link>
               <Link href="#contact" className="text-gray-700 hover:text-teal-900">Contact</Link>
             </div>
@@ -121,11 +120,11 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 py-6">
           <div className="grid md:grid-cols-3 gap-8">
             {[
-              { Icon: Clock, text: "Mon-Sat: 8:30AM - 5:30PM" },
+              { Icon: Clock, text: "Mon-Sat: 9AM - 6PM, Sunday: Closed" },
               { Icon: Phone, text: "Contact Us", href: "#contact" },
               { Icon: MapPin, text: "18 Gilgal, Stourport-On-Severn, DY13 9AJ" }
             ].map((item, index) => (
-              <div key={index} className="flex items-center gap-3">
+              <div key={index} className="flex items-center justify-center gap-3">
                 <item.Icon className="w-6 h-6 text-orange-400" />
                 {item.href ? (
                   <a href={item.href} className="font-medium text-white hover:text-orange-200">
@@ -286,39 +285,6 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Projects Showcase */}
-      <div id="projects" className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4 text-teal-900">Featured Project</h2>
-            <p className="text-gray-700 max-w-3xl mx-auto">
-              Take a look at one of our recently completed projects showcasing our quality and craftsmanship
-            </p>
-          </div>
-          <div className="max-w-4xl mx-auto">
-            <div className="group relative h-96 overflow-hidden rounded-lg">
-              <Image
-                src="/products_1.jpg"
-                alt="Modern Home Extension"
-                className="w-full h-full object-cover group-hover:scale-105 transition duration-300"
-                fill
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-6">
-                <h3 className="text-2xl font-semibold text-white mb-1">Modern Home Extension</h3>
-                <p className="text-teal-200 mb-3">Stourport-on-Severn, Worcestershire</p>
-                <p className="text-white mb-4">Complete rear extension with kitchen renovation and landscaped garden, transforming this family home with additional living space and modern amenities.</p>
-                <Link
-                  href="#contact"
-                  className="text-orange-400 hover:text-orange-300 inline-flex items-center font-medium transition-colors duration-200"
-                >
-                  Enquire About Your Project <ChevronRight className="w-4 h-4 ml-1" />
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
       {/* Testimonials */}
       <div id="testimonials" className="py-24 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4">
@@ -371,29 +337,22 @@ export default function Home() {
                 </div>
                 <div className="flex items-center gap-3">
                   <Mail className="w-6 h-6 text-orange-400" />
-                  <span className="text-white">info@azizbuildingservices.co.uk</span>
+                  <span className="text-white">shazirul.azizbuildingservices@outlook.com</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <Clock className="w-6 h-6 text-orange-400" />
-                  <span className="text-white">Mon-Sat: 8:30AM - 5:30PM</span>
+                  <span className="text-white">Mon-Sat: 9AM - 6PM, Sunday: Closed</span>
                 </div>
               </div>
               <div className="mt-8 flex gap-4">
-                <a href="#" className="text-white hover:text-orange-400">
+                <span className="text-white">
                   <Facebook className="w-6 h-6" />
-                </a>
-                <a href="#" className="text-white hover:text-orange-400">
-                  <Instagram className="w-6 h-6" />
-                </a>
-                <a href="#" className="text-white hover:text-orange-400">
-                  <Twitter className="w-6 h-6" />
-                </a>
+                </span>
               </div>
             </div>
             <div className="bg-white p-8 rounded-lg shadow-lg">
               <h3 className="text-xl font-semibold mb-6 text-teal-900">Get in Touch</h3>
               <div>
-
                 <form onSubmit={handleSubmit} className="relative">
                   {isSubmitted && (
                     <div className="absolute inset-0 flex items-center justify-center bg-white bg-opacity-90 z-10 rounded-lg transition-opacity duration-300">
@@ -477,7 +436,6 @@ export default function Home() {
               <ul className="space-y-2">
                 <li><Link href="#about" className="text-gray-400 hover:text-white">About Us</Link></li>
                 <li><Link href="#services" className="text-gray-400 hover:text-white">Services</Link></li>
-                <li><Link href="#projects" className="text-gray-400 hover:text-white">Projects</Link></li>
                 <li><Link href="#testimonials" className="text-gray-400 hover:text-white">Testimonials</Link></li>
                 <li><Link href="#contact" className="text-gray-400 hover:text-white">Contact</Link></li>
               </ul>
@@ -502,7 +460,8 @@ export default function Home() {
             </div>
           </div>
           <div className="pt-8 border-t border-gray-800 text-center text-gray-400">
-            <p>© {new Date().getFullYear()} Aziz Building Services. All rights reserved.</p>
+            <p className="mb-2">© {new Date().getFullYear()} AZIZ BUILDING SERVICES LTD. All rights reserved.</p>
+            <p>Company No. 15578120</p>
           </div>
         </div>
       </footer>
