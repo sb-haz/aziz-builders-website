@@ -2,7 +2,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import React from "react";
-import { Phone, MapPin, Clock, ChevronRight, Star, HomeIcon, Hammer, Users, Mail, Facebook, Instagram, Twitter, Check, Wrench, HardHat, Clock3, Handshake } from 'lucide-react';
+import { Phone, MapPin, Clock, ChevronRight, Star, HomeIcon, Hammer, Users, Mail, Facebook, Check, Wrench, HardHat, Clock3, Handshake } from 'lucide-react';
 
 export default function Home() {
   const [formState, setFormState] = React.useState({
